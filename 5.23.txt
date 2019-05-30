@@ -1,0 +1,6 @@
+1.深拷贝：
+2.jquery插件**vue插件
+
+
+...
+object.assign()
