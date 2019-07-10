@@ -1,0 +1,14 @@
+export const submitManuscriptAssess = (param = {}) => $.ajax({
+    url: BASEURL + '/msAssessCensorController/submitManuscriptAssess',
+    type: "post",
+    data: param,
+    async: false,
+    beforeSend: function (XHR) {
+        XHR.setRequestHeader("userId", JSON.parse(window.sessionStorage.getItem("loginModel")).userId);
+        XHR.setRequestHeader("userName",encodeURIComponent(JSON.parse(window.sessionStorage.getItem("loginModel")).userName));
+        XHR.setRequestHeader("token", JSON.parse(window.sessionStorage.getItem("loginModel")).token);
+    },
+});
+
+给后台请求头里面加信息：有中文的时候应该用encodeURIComponent编码，否则不行。
+

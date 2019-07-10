@@ -1,0 +1,20 @@
+vue-cli2如何用webpack配置的？
+    1.dev :webpack-dev-server --inline --progress --config build/webpack.dev.conf.js;(由此找到webpack.dev.conf.js);
+    2.webpack.dev.conf.js找到入口和出口。
+    3.  这两个插件---服务器打包的后的文件并没有物理存在电脑上，只是在内存中
+    new HtmlWebpackPlugin({
+      filename: 'index.html',
+      template: 'index.html',
+      inject: true
+    }),
+    // copy custom static assets
+    new CopyWebpackPlugin([
+      {
+        from: path.resolve(__dirname, '../static'),
+        to: config.dev.assetsSubDirectory,
+        ignore: ['.*']
+      }
+    ])
+
+    4.process是node的全局变量 process.env也是。
+    

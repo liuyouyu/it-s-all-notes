@@ -1,0 +1,77 @@
+1.package.json与package-lock.json区别;
+    package-lock.json可以锁定固定的版本号；
+    ^ 代表第一位一样： 1.x.x;
+    ~ 代表第二位一样： 1.1.x;
+    例如：下面--每一个（版本号带有^或者~）的依赖都可以找到确定的（唯一的）（版本号‘不’带有^或者~）版本号！！！(不带'^'或者'~');
+          
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+    "yargs": {
+        "version": "8.0.2",
+        "resolved": "https://registry.npmjs.org/yargs/-/yargs-8.0.2.tgz",
+        "integrity": "sha1-YpmpBVsc78lp/355wdkY3Osiw2A=",
+        "dev": true,
+        "requires": {
+            "camelcase": "^4.1.0",
+            "cliui": "^3.2.0",
+            "decamelize": "^1.1.1",
+            "get-caller-file": "^1.0.1",
+            "os-locale": "^2.0.0",
+            "read-pkg-up": "^2.0.0",
+            "require-directory": "^2.1.1",
+            "require-main-filename": "^1.0.1",
+            "set-blocking": "^2.0.0",
+            "string-width": "^2.0.0",
+            "which-module": "^2.0.0",
+            "y18n": "^3.2.1",
+            "yargs-parser": "^7.0.0"
+        },
+        "dependencies": {
+            "camelcase": {
+            "version": "4.1.0",
+            "resolved": "https://registry.npmjs.org/camelcase/-/camelcase-4.1.0.tgz",
+            "integrity": "sha1-1UVjW+HjPFQmScaRc+Xeas+uNN0=",
+            "dev": true
+            },
+            "cliui": {
+            "version": "3.2.0",
+            "resolved": "https://registry.npmjs.org/cliui/-/cliui-3.2.0.tgz",
+            "integrity": "sha1-EgYBU3qRbSmUD5NNo7SNWFo5IT0=",
+            "dev": true,
+            "requires": {
+                "string-width": "^1.0.1",
+                "strip-ansi": "^3.0.1",
+                "wrap-ansi": "^2.0.0"
+            },
+            "dependencies": {
+                "string-width": {
+                "version": "1.0.2",
+                "resolved": "https://registry.npmjs.org/string-width/-/string-width-1.0.2.tgz",
+                "integrity": "sha1-EYvfW4zcUaKn5w0hHgfisLmxB9M=",
+                "dev": true,
+                "requires": {
+                    "code-point-at": "^1.0.0",
+                    "is-fullwidth-code-point": "^1.0.0",
+                    "strip-ansi": "^3.0.0"
+                }
+                }
+            }
+            },
+            "is-fullwidth-code-point": {
+            "version": "1.0.0",
+            "resolved": "https://registry.npmjs.org/is-fullwidth-code-point/-/is-fullwidth-code-point-1.0.0.tgz",
+            "integrity": "sha1-754xOG8DGn8NZDr4L95QxFfvAMs=",
+            "dev": true,
+            "requires": {
+                "number-is-nan": "^1.0.0"
+            }
+            },
+            "y18n": {
+            "version": "3.2.1",
+            "resolved": "https://registry.npmjs.org/y18n/-/y18n-3.2.1.tgz",
+            "integrity": "sha1-bRX7qITAhnnA136I53WegR4H+kE=",
+            "dev": true
+            }
+        }
+        },
+        

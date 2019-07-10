@@ -1,0 +1,67 @@
+vue.use。
+vue.use是调用了install方法，axios没有用vue.use(axios)是因为axios没有install方法。因为axios不是单独给vue用的，别的框架也会用。
+
+
+$event的用法aaa
+
+
+只有v-model双向
+
+
+
+
+
+//////////////////////////////////v-model双向//////////////////////////////////
+
+官网啊啊啊啊啊啊啊啊
+v-model 在内部为不同的输入元素使用不同的属性并抛出不同的事件：
+
+text 和 textarea 元素使用 value 属性和 input 事件；
+checkbox 和 radio 使用 checked 属性和 change 事件；
+select 字段将 value 作为 prop 并将 change 作为事件。
+
+eg：v-model和on-change
+
+          <Col span="12">
+            <span class="label-title" style="width:60px;">发布日期:</span>
+            <DatePicker
+              :value="detailData.msPublishTime"
+              @on-change="detailData.msPublishTime=$event"
+              type="date"
+              placement="bottom-end"
+              split-panels
+              style="width: 260px"
+            ></DatePicker>
+          </Col>
+
+
+查看：v-model如何实现；
+
+
+///////////////////////////////////iview////////////////////////////////////
+
+clearable 属性可以清空select下拉框啊啊啊啊啊啊啊啊啊啊；
+
+
+////////////js语句和表达式/////////////////////////////
+
+https://www.cnblogs.com/xianshenglu/p/8386918.html
+
+//////////////////////////////////////props是单向的啊啊啊啊啊////////////////////////////////////
+
+
+是单项的。
+
+例如:wechat.vue-edit.vue这两个模块。
+
+如果在子模块-edit.vue直接用    personOptionsAll 和personOptions就会报错:错误信息是：
+（[Vue warn]: Avoid mutating a prop directly since the value will be overwritten whenever the parent component re-renders. Instead, use a data or computed property based on the prop's value. Prop being mutated: "result" (found in component )）
+因为：personOptionsAll和personOptions在父模块wechat.vue用到了。
+所以用：
+     personOptionsAll2: this.personOptionsAll,
+      personOptions2: this.personOptions,
+像this.detailData在父模块中就没有用到，所以可以用啊。
+
+
+//////////////////////////////////////驼峰命名和短中线分隔符////////////////////////////////////
+vue官网搜kebab-case

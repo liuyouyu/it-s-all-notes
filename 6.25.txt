@@ -1,0 +1,4 @@
+vue模板语法
+1.插值
+2.v-html原始的html
+3.Attributes(html属性上面)用v-bind;
