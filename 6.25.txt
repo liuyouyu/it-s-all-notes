@@ -1,4 +1,8 @@
-vue模板语法
+vue模板语法(在template标签里面写的东东)--vue官网（主要分为下面三大类）；
 1.插值
-2.v-html原始的html
-3.Attributes(html属性上面)用v-bind;
+（数据绑定最常见的形式就是使用“Mustache”语法 (双大括号) 的文本插值：）
+2.指令
+v-html原始的html
+Attributes(html属性上面)用v-bind;
+3.缩写
+  ：和 @
